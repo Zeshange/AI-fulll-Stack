@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELION HOME PAGE</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./helion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <style>
+        * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+}
+
+.imgcontent {
+   color: white;
+}
+
+.header {
+   height: 108vh;
+   width: 100%;
+   background-color: #222127;
+}
+
+.nav {
+   width: 100%;
+   padding: 20px 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.479);
+   position: fixed;
+   top: 0;
+   z-index: 5;
+}
+
+.manu>ul {
+   list-style: none;
+   display: flex;
+   gap: 30px;
+}
+
+.manu>ul>li {
+   color: white;
+   font-family: sans-serif;
+   font-weight: 600;
+   transition: .3s;
+   font-size: medium;
+
+}
+
+.manu>ul>li:hover {
+   text-decoration: line-through;
+   text-decoration-thickness: 2px;
+
+}
+
+#active {
+   text-decoration: line-through;
+   text-decoration-thickness: 2px;
+}
+
+.icons>ul {
+   list-style: none;
+   display: flex;
+   gap: 30px;
+}
+
+.icons>ul>li {
+   color: white;
+   font-family: sans-serif;
+   font-weight: 600;
+   position: relative;
+}
+
+.icons>ul>li>i {
+   font-size: 20px;
+
+}
+
+.cartcount {
+   height: 15px;
+   width: 15px;
+   background-color: red;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   left: 20px;
+   top: 5px;
+   font-size: 10px;
+
+}
+
+.headerImg {
+   height: 108vh;
+   overflow: hidden;
+   width: 100%;
+
+}
+
+.headerImgs_parent {
+   width: 75%;
+   margin: auto;
+   position: relative;
+
+}
+
+#imgone {
+   position: absolute;
+   top: 550px;
+   animation-name: headerImgs;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   opacity: 0;
+   visibility: hidden;
+   overflow: hidden;
+
+}
+
+.imgoneContent {
+   background-color: blue;
+   width: 80%;
+   position: absolute;
+   top: 100px;
+   text-align: center;
+   z-index: 11;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.imgoneContent h1 {
+   font-size: 70px;
+}
+
+#imgtwo {
+   position: absolute;
+   top: 550px;
+   animation-name: headerImgs2;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   /* opacity: 0;
+ visibility: hidden;  */
+}
+
+@keyframes headerImgs {
+   0% {
+      top: 550px;
+      opacity: 0;
+      visibility: hidden;
+
+   }
+
+   5% {
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+
+   }
+
+   50% {
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+
+      #pone {
+         color: red;
+      }
+   }
+
+   51% {
+      top: 550px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   100% {
+      top: 550px;
+
+      opacity: 0;
+      visibility: hidden;
+   }
+
+}
+
+
+@keyframes headerImgs2 {
+   0% {
+      top: 550px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   51% {
+      top: 550px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   56% {
+      top: 0px;
+      opacity: 1;
+      visibility: visible;
+   }
+
+   100% {
+      top: 0px;
+      opacity: 1;
+      visibility: visible;
+   }
+
+}
+
+.headerImgs_parent img {
+   width: 90%;
+   position: relative;
+
+}
+
+
+
+.imgcount {
+   display: flex;
+   justify-content: space-around;
+
+   color: white;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+
+}
+
+.count {
+   display: flex;
+   justify-content: space-between;
+
+   width: 80px;
+}
+
+.arrow {
+   display: flex;
+   justify-content: space-between;
+
+   width: 80px;
+}
+
+#pone {
+   font-size: 20px;
+   font-weight: bold;
+   animation-name: pone;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+
+@keyframes pone {
+   0% {
+      color: white;
+   }
+
+   5% {
+      color: rgb(211, 54, 28);
+
+   }
+
+   50% {
+      color: rgb(211, 54, 28);
+   }
+
+   51% {
+      color: white;
+   }
+
+   100% {
+      color: white;
+
+   }
+
+}
+
+
+#ptwo {
+   font-size: 20px;
+   font-weight: bold;
+   animation-name: ptwo;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+@keyframes ptwo {
+   0% {
+      color: white;
+   }
+
+   51% {
+      color: white;
+   }
+
+   56% {
+      color: rgb(211, 54, 28);
+   }
+
+   100% {
+      color: rgb(211, 54, 28);
+   }
+
+}
+
+.imgoneContent {
+
+   width: 80%;
+   position: absolute;
+   top: 50px;
+   text-align: center;
+   z-index: 11;
+   left: 50%;
+   /* top: 50%; */
+   transform: translate(-50%, -50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   animation-name: imgoneContent;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   overflow: hidden;
+}
+
+.imgoneContent h1 {
+   font-size: 70px;
+   color: white;
+}
+
+.imgoneContent {
+   background-color: transparent;
+}
+
+
+@keyframes imgoneContent {
+   0% {
+      top: 10%;
+      height: 0px;
+   }
+
+   20% {
+      top: 40%;
+      height: auto;
+
+   }
+
+   50% {
+      top: 40%;
+      height: auto;
+   }
+
+   51% {}
+
+   100% {}
+
+}
+
+
+.imgonebuton {
+
+
+   position: absolute;
+   /* background-color: transparent; */
+   text-align: center;
+   /* color: white; */
+   /* border: 2px solid white; */
+   width: 180px;
+   /* border-radius: 4px; */
+   z-index: 11;
+   left: 50%;
+   /* top: 50%; */
+   transform: translate(-50%, -50%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* animation-name: ;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; */
+   overflow: hidden;
+   font-size: 20px;
+   /* background-color: aqua; */
+   bottom: 0%;
+   height: 200px;
+}
+
+.imgonebuton button {
+   background-color: transparent;
+   text-align: center;
+   color: white;
+   border: 2px solid white;
+   width: 180px;
+   height: 50px;
+   border-radius: 4px;
+   padding: 10px 0;
+   position: absolute;
+   bottom: 0;
+   animation-name: imgbtun;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;
+}
+
+@keyframes imgbtun {
+   0% {
+      bottom: 0;
+      
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   5% {
+      bottom: 0;
+      
+
+
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   15% {
+      bottom: 100px;
+      height: 50px;
+
+      opacity: 1;
+      visibility: visible;
+
+   }
+
+   50% {
+      bottom: 100px;
+      height: 50px;
+
+      opacity: 1;
+      visibility: visible;
+
+   }
+
+   51% {}
+
+   100% {}
+
+}
+
+.moving-btn {
+   
+   
+   
+   position: absolute;
+   bottom: 0;
+   animation: monving_div;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   z-index: 12;
+   border-radius: 50px;
+}
+
+@keyframes monving_div {
+   0% {
+      bottom: 30px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+  
+
+   20% {
+      bottom: 30px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   25% {
+      bottom: 50px;
+      opacity: 1;
+      visibility: visible;
+
+   }
+
+   30% {
+      bottom: 40px;
+   }
+
+   35% {
+      bottom: 50px;
+   }
+
+   40% {
+      bottom: 40px;
+   }
+
+   45% {
+      bottom: 50px;
+   }
+
+   50% {
+      bottom: 40px;
+   }
+
+   55% {
+      bottom: 50px;
+   }
+
+   60% {
+      bottom: 40px;
+   }
+   65% {
+      bottom: 50px;
+   }
+   70% {
+      bottom: 40px;
+   }
+   75% {
+      bottom: 50px;
+   }
+   80% {
+      bottom: 40px;
+   }
+   85% {
+      bottom: 50px;
+   }
+   90% {
+      bottom: 40px;
+   }
+   95% {
+      bottom: 50px;
+   }
+   100% {
+      bottom: 40px;
+   }
+
+}
+
+.imgbutn_p {
+   position: absolute;
+   bottom: 0;
+}
+
+
+.imgtwoContent{
+  
+   position: absolute;
+   
+   width: 40%;
+   text-align: center;
+   /* background-color: blue; */
+ 
+ color: white;
+   
+   text-align: center;
+   z-index: 11;
+   left: 50%;
+   top: 20%;
+   transform: translate(-50%, -50%);
+   animation: imgtwocontent 10s linear infinite ;
+}
+/* @keyframes imgtwocontent{
+   form{
+      top: 20%;
+      to{
+         top: 40%;
+      }
+   }
+} */
+@keyframes imgtwocontent {
+   0% {
+      
+   }
+
+   20% {
+    
+
+   }
+
+   50% {
+     
+   }
+
+   51% {
+      top: 20%;
+      height: 0px;
+   }
+   70%{
+      top: 40%;
+      height: auto;
+   }
+
+   100% {
+      top: 40%;
+      height: auto;
+   }
+
+}
+
+.imgtwoContentheading{
+   width: 80%;
+   margin: auto;
+   height: 150px;
+   
+   position: absolute;
+   top: 70%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 13;
+   font-size: 35px;
+   color: white;
+   /* display: flex;
+   align-items: center;
+   justify-content: center; */
+   text-align: center;
+   animation: imgtwoheading 10s linear infinite forwards 5s;
+
+}
+@keyframes imgtwoheading{
+  0%{
+   top: 70%;
+   opacity: 0;
+   visibility: hidden;
+  }
+  20%{
+   top: 70%;
+   opacity: 0;
+   visibility: hidden;
+  }
+
+  30%{
+   top: 60%;
+   opacity: 1;
+   visibility: visible;
+  }
+  100%{
+   top: 60%;
+   opacity: 1;
+   visibility: visible;
+  }
+
+}
+
+.moving-btn2 {
+   
+   height: 50px;
+   width: 10px;
+  text-align: center;
+  
+  border: 1px solid white;
+ 
+  position: absolute;
+bottom: 100px;
+margin: auto;
+z-index: 13;
+}
+.moving-btn2{
+   height: 35px;
+   width: 20px;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  
+   transform: translate(-50%);
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   border-radius: 50px;
+   border: 2px solid white;
+   animation: movingbtn2 10s linear infinite forwards 5s;
+}
+.btninnerChild{
+   height: 6px;
+   width: 2px;
+   background-color: white;
+   margin-top: 8px;
+   border-radius: 50px;
+}
+
+
+
+
+@keyframes movingbtn2 {
+   0% {
+      bottom: 80px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+  
+
+   20% {
+      bottom: 80px;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   25% {
+      bottom: 110px;
+      opacity: 1;
+      visibility: visible;
+
+   }
+
+   30% {
+      bottom: 100px;
+   }
+
+   35% {
+      bottom: 110px;
+   }
+
+   40% {
+      bottom: 100px;
+   }
+
+   45% {
+      bottom: 110px;
+   }
+
+   50% {
+      bottom: 100px;
+   }
+
+   55% {
+      bottom: 110px;
+   }
+
+   60% {
+      bottom: 100px;
+   }
+   65% {
+      bottom: 110px;
+   }
+   70% {
+      bottom: 100px;
+   }
+   75% {
+      bottom: 110px;
+   }
+   80% {
+      bottom: 100px;
+   }
+   85% {
+      bottom: 110px;
+   }
+   90% {
+      bottom: 100px;
+   }
+   95% {
+      bottom: 50px;
+   }
+   100% {
+      bottom: 100px;
+   }
+
+}
+/* --------------header End------------------- */
+
+.who_we_are {
+   height: 100vh;
+   width: 100%;
+   background-color: #F8F5F2;
+   ;
+}
+
+.wwr-main {
+   padding: 100px 0;
+   width: 90%;
+
+   height: 100%;
+   margin: auto;
+   display: flex;
+}
+
+.wwr_img {
+   width: 50%;
+   height: 100%;
+
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+
+}
+
+.wwr_img:hover img {
+   transform: scale(1.1) rotate(5deg);
+}
+
+.wwr_content {
+   width: 50%;
+   height: 100%;
+   /* background-color: #3116b8; */
+   padding: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.wwr_img img {
+   width: 80%;
+   transition: .5s;
+}
+
+.wwr_content_headingParent {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.www_contentDiv {
+   height: 3px;
+   width: 70px;
+   background-color: black;
+}
+
+.wwr_content h1 {
+   font-size: 50px;
+}
+
+
+.wwr_btn {
+   font-weight: 500;
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 4px;
+   width: 180px;
+   height: 45px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   /* transition: .4s; */
+}
+
+.wwr_btn i {
+   display: none;
+
+}
+
+.wwr_btn:hover i {
+   display: flex;
+
+
+}
+
+.wwr_btn:hover {
+   background-color: black;
+   color: white;
+
+}
+
+
+/* who we are End------------------------------------ */
+
+.services {
+   height: 90vh;
+   width: 100%;
+   background-color: white;
+}
+
+.services_main {
+   padding: 80px 0;
+   width: 90%;
+   height: 100%;
+   margin: auto;
+
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.services_child {
+   height: 100%;
+   width: 30%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+
+}
+
+.services_child p {
+   text-align: center;
+}
+
+.serviceArrow {
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   background-color: #F8F5F2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.services_child img {
+   padding-bottom: 20px;
+}
+
+.servceButton {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+
+   width: 160px;
+   transition: 1s;
+
+}
+
+.serviceArrow_content {
+   display: none;
+
+}
+
+.services_child:hover .serviceArrow_content {
+   display: flex;
+}
+
+.services_child:hover img {
+   padding-bottom: 40px;
+}
+
+/* ----Services  End--------------------- */
+.photos {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+}
+
+.photo_one {
+   height: 100%;
+   width: 50%;
+   background-image: url(./imgs/port-1-copyright.jpg);
+   background-size: cover;
+   background-position: center;
+
+}
+
+.photo_two {
+   height: 100%;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+
+
+
+}
+
+.phototwo_childOno {
+   height: 50%;
+   width: 100%;
+   display: flex;
+   background-size: cover;
+   background-position: center;
+}
+
+.phototwo_childtwo {
+   height: 50%;
+   width: 100%;
+   background-image: url(./imgs/post-7-copyright.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.ptwo_subchild_one {
+   height: 100%;
+   width: 50%;
+   background-image: url(./imgs/port-2-copyright-740x580.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.ptwo_subchild_two {
+   height: 100%;
+   width: 50%;
+   background-image: url(./imgs/port-6-copyright-740x580.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.testimonial {
+   width: 100%;
+   height: 130vh;
+   padding: 100px 0;
+
+}
+
+.testimonial-heading {
+   height: auto;
+   width: 500px;
+
+   margin: auto;
+   text-align: center;
+}
+
+.testimonial-heading h1 {
+   margin: 20px 0 30px 0;
+   font-size: 50px;
+}
+
+.tcardsContainer {
+   width: 90%;
+   height: 100%;
+   margin: auto;
+   overflow: hidden;
+
+}
+
+.slider {
+   width: 200%;
+   height: 100%;
+
+   display: flex;
+   justify-content: space-between;
+   animation: testimonial 10s linear infinite;
+
+}
+
+@keyframes testimonial {
+   0% {
+      margin-left: 0;
+   }
+
+   14.28% {
+      margin-left: 0;
+   }
+
+   28.56% {
+      margin-left: -33%;
+
+   }
+
+   42.84% {
+      margin-left: -33%;
+   }
+
+   57.12% {
+      margin-left: -67%;
+   }
+
+   71.40% {
+      margin-left: -67%;
+   }
+
+   85.68% {
+      margin-left: -102%;
+   }
+
+   100% {
+      margin-left: -102%;
+   }
+}
+
+.slide {
+   width: 15%;
+   height: 85%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+.slid_content {
+   width: 100%;
+   height: 300px;
+   border: 1px solid gray;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   padding: 40px;
+   font-size: 18px;
+   text-align: center;
+   border-radius: 8px;
+   position: relative;
+
+}
+
+
+
+
+.slidecontentdestination {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+
+   gap: 10px;
+}
+
+.contentDesign {
+   height: 20px;
+   width: 35px;
+
+   position: absolute;
+   background-color: gray;
+
+   z-index: 15;
+   bottom: -20px;
+   clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.content-arrow {
+   display: flex;
+   gap: 5px;
+}
+
+.contentArrowOne {
+   height: 20px;
+   width: 10px;
+   background-color: gray;
+   clip-path: polygon(100% 0, 100% 99%, 0 100%, 0 56%);
+
+}
+
+.slid_content p {
+   line-height: 25px;
+   color: gray;
+}
+
+.slide img {
+   width: 80px;
+   border-radius: 50%;
+
+}
+
+.slide p {
+
+   color: gray;
+
+}
+
+
+
+/* testimonial end------------------------ */
+
+
+.logos {
+   width: 90%;
+   margin: auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(2, 100px);
+   gap: 30px;
+   height: 80vh;
+   padding: 100px 0;
+
+}
+
+.logo1 {
+   background-image: url(./imgs/clients-black-1-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+
+.logo2 {
+   background-image: url(./imgs/clients-black-3-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo3 {
+   background-image: url(./imgs/clients-black-4-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo4 {
+   background-image: url(./imgs/clients-black-5-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo5 {
+   background-image: url(./imgs/clients-black-6-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo6 {
+   background-image: url(./imgs/clients-black-7-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo7 {
+   background-image: url(./imgs/clients-black-8-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+.logo8 {
+   background-image: url(./imgs/clients-black-1-copyright.png);
+   border: 1px solid gray;
+   border-radius: 8px;
+   background-position: center;
+}
+
+/* Logos End=-------------------------- */
+.article {
+   height: 130vh;
+   width: 100%;
+   background-color: #F8F5F2;
+   padding: 100px 0;
+   
+
+}
+
+.articlep {
+   width: 90%;
+   margin: auto;
+}
+
+/* .articleheading {
+   width: 100%;
+   height: auto;
+   margin: 30px 0;
+} */
+
+
+/* .articleinput {
+   width: 60%;
+}
+
+.articleinput input {
+   width: 100%;
+   height: 50px;
+   border: none;
+   outline: none;
+   font-size: 40px;
+}
+
+.articleinput input::placeholder {
+   color: black;
+} */
+ .articlep h1{
+   font-size: 50px;
+   margin: 30px 0;
+ }
+
+ .articleParent{
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+   margin: auto;
+ }
+  .articleOne{
+   width: 31%;
+  
+   overflow: hidden;
+ } 
+ 
+ .articleOne img{
+  border-radius: 8px;
+  transition: .5s;
+ } 
+
+ .articleContent{
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   gap: 20px;
+ }
+ .date{
+   display: flex;
+   align-items: center;
+   
+  
+ }
+ .news{
+  font-size: large;
+  
+ }
+  .dot{
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background-color: gray;
+   margin: auto;
+ } 
+ .dott{
+   width: 30px;
+   
+ }
+ .dat{
+   color: gray;
+ }
+
+ .readMore{
+   margin-left: -30px;
+   display: flex;
+ }
+
+ .readMore i{
+  margin-right: 15px;
+ }
+
+ .articleOne:hover .readMore{
+   margin-left: 0;
+ }
+ .articleOne:hover img{
+  transform: scale(1.1);
+ }
+
+
+ /* Article------------------------------- */
+
+ .form{
+   width: 100%;
+   height: 300px;
+
+ }
+
+ .formParent{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 100px 0; 
+ }
+
+ .fom{
+   width: 100%;
+   margin-top: 50px;
+   display: flex;
+ }
+
+ .input{
+   width: 60%;
+
+ }
+
+ .input input{
+   width: 100%;
+   height: 50px;
+   border: none;
+   outline: 0;
+   font-size: 50px;
+
+ }
+
+ .input input::placeholder{
+  color: black;
+
+ }
+
+
+ .radio{
+   width: 40%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+ }
+
+ .radicontext{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ 
+ .contact{
+   width: 100%;
+   height: 70vh;
+   background-color: bisque;
+   display: flex;
+ }
+
+ .intouch{
+   width: 50%;
+   height: 100%;
+   background-image: url(./imgs/extra_bg-1.png);
+   padding: 80px;
+ }
+
+ .incontact{
+   width: 50%;
+   height: 100%;
+   background-image: url(./imgs/extra_bg-2.png);
+   padding: 100px;
+ }
+
+ /* ------------------------------------------------ */
+ .intouch{
+   
+ }
+
+ .intouch p{
+   color: white;
+}
+ .intouch h2{
+font-size: 40px;
+color: white;
+margin: 20px 0;
+ }
+ .incontact p{
+   color: white;
+}
+
+ .incontact h2{
+   font-size: 40px;
+   color: white;
+   margin: 20px 0;
+    }
+
+ .getintouchbtn{
+   height: 50px;
+   width: 200px;
+   border: 2px solid white;
+   text-align: center;
+   line-height: 50px;
+   color: white;
+ }
+       </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logo">
+                <img src="./imgs/logo-inverse.png" alt="">
+            </div>
+            <div class="manu">
+                <ul>
+                    <li id="active">Home.</li>
+                    <li>Page.</li>
+                    <li>About Us.</li>
+                    <li>Blog.</li>
+                    <li>Store.</li>
+                    <li>Contant.</li>
+                </ul>
+            </div>
+            <div class="icons">
+                <ul>
+
+
+                    <li><i class="fa-solid fa-cart-shopping"></i>
+                        <div class="cartcount">0</div>
+                    </li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerImg">
+            <div class="headerImgs_parent">
+                <div id="imgone">
+                    <div class="imgoneContent">
+                        <h1>We Design & Build <br>Unique Things</h1>
+                    </div>
+                    <div class="imgonebuton">
+                        <button>Get In Touch</button>
+                        <div class="moving-btn">
+                            <img src="./imgs/mouse-clicker.png" alt="">
+                        </div>
+                        <div class="imgbutn_p">
+                            <p>djhfldhdl</p>
+                        </div>
+                    </div>
+                    <img src="./imgs/main-slider-img-copyright.png" alt="">
+                </div>
+
+
+                <div id="imgtwo">
+                    <div class="imgtwoContent">
+                        <h3>creative solution</h3>
+                    </div>
+
+                    <div class="imgtwoContentheading">
+                        <h1>We Design & Build <br>Unique Things</h1>
+                    </div>
+                    <div class="moving-btn2">
+                      <div class="btninnerChild"></div>
+                    </div>
+                    <div class="imgbutn_p">
+                        <p>djhfldhdl</p>
+                    </div>
+
+                    <img src="./imgs/main-slider-img2-copyright.png" alt="">
+                </div>
+                <!--  -->
+
+            </div>
+            <div class="imgcount">
+
+                <div class="count">
+                    <p id="pone">01</p>
+                    <p id="ptwo">02</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="who_we_are">
+            <div class="wwr-main">
+                <div class="wwr_img">
+                    <img src="./imgs/img-3-copyright.png" alt="">
+                </div>
+                <div class="wwr_content">
+                    <div class="wwr_content_headingParent">
+                        <div class="www_contentDiv"></div>
+                        <div class="wwr_contentheading">
+                            Who We Are
+                        </div>
+
+                    </div>
+                    <h1>We design & build
+                        ultimate things</h1>
+                    <p>
+                        We want our clients to feel awesome and unique.
+                        Let us bring your projects to another level!
+                    </p>
+                    <div class="wwr_btn">
+                        Our Services
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="services_main">
+                <div class="services_child">
+                    <img src="./imgs/rocket.png" alt="">
+                    <h2>
+                        Creative Design
+                    </h2>
+                    <p>
+
+
+                        Design to us is something magical – we are lucky that our clients let us get creative and build
+                        new products
+                    </p>
+                    <div class="servceButton">
+                        <div class="serviceArrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="serviceArrow_content">
+                            More Details
+                        </div>
+                    </div>
+                </div>
+                <div class="services_child">
+                    <img src="./imgs/rocket.png" alt="">
+                    <h2>
+                        Creative Design
+                    </h2>
+                    <p>
+
+
+                        Design to us is something magical – we are lucky that our clients let us get creative and build
+                        new products
+                    </p>
+                    <div class="servceButton">
+                        <div class="serviceArrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="serviceArrow_content">
+                            More Details
+                        </div>
+                    </div>
+                </div>
+                <div class="services_child">
+                    <img src="./imgs/rocket.png" alt="">
+                    <h2>
+                        Creative Design
+                    </h2>
+                    <p>
+
+
+                        Design to us is something magical – we are lucky that our clients let us get creative and build
+                        new products
+                    </p>
+                    <div class="servceButton">
+                        <div class="serviceArrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="serviceArrow_content">
+                            More Details
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="photos">
+            <div class="photo_one">
+
+            </div>
+            <div class="photo_two">
+                <div class="phototwo_childOno">
+                    <div class="ptwo_subchild_one"></div>
+                    <div class="ptwo_subchild_two"></div>
+                </div>
+                <div class="phototwo_childtwo">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-heading">
+                <p>Testimonials</p>
+                <h1>What Clients Say
+                </h1>
+            </div>
+            <div class="tcardsContainer">
+                <div class="slider">
+
+                    <div class="slide">
+                        <div class="slid_content">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                For me as a photographer, this is an awesome opportunity to share my works and to
+                                communicate with other people who are into graphic art and photography!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/1test-copyright-480x480.jpg" alt="">
+                            <h3>John Lewis</h3>
+                            <p>CEO, Designer</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slid_content slide2">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                When our designs need an expert opinion or approval, I know I can rely on your agency.
+                                Thank you for all your help – I will be recommending you to everyone!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/4test-copyright-480x480.jpg" alt="">
+                            <h3>Rita Johnson</h3>
+                            <p>Sales Manager</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slid_content ">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                This is a great website for any type of creative agency or a designer to get inspired,
+                                educated and simply to see other designers’ works. Excellent job guys!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/2test-copyright-480x480.jpg" alt="">
+                            <h3>Brian Smith</h3>
+                            <p>Sales Manager</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slid_content">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                For me as a photographer, this is an awesome opportunity to share my works and to
+                                communicate with other people who are into graphic art and photography!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/1test-copyright-480x480.jpg" alt="">
+                            <h3>John Lewis</h3>
+                            <p>CEO, Designer</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slid_content">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                When our designs need an expert opinion or approval, I know I can rely on your agency.
+                                Thank you for all your help – I will be recommending you to everyone!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/4test-copyright-480x480.jpg" alt="">
+                            <h3>Rita Johnson</h3>
+                            <p>Sales Manager</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slid_content">
+                            <div class="contentDesign"></div>
+                            <div class="content-arrow">
+                                <div class="contentArrowOne"></div>
+                                <div class="contentArrowOne"></div>
+                            </div>
+                            <p>
+                                This is a great website for any type of creative agency or a designer to get inspired,
+                                educated and simply to see other designers’ works. Excellent job guys!
+                            </p>
+                        </div>
+
+                        <div class="slidecontentdestination">
+                            <img src="./imgs/2test-copyright-480x480.jpg" alt="">
+                            <h3>Brian Smith</h3>
+                            <p>Sales Manager</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="logos">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+            <div class="logo3"></div>
+            <div class="logo4"></div>
+            <div class="logo5"></div>
+            <div class="logo6"></div>
+            <div class="logo7"></div>
+            <div class="logo8"></div>
+
+        </div>
+        <div class="article">
+
+            <div class="articlep">
+                <div class="wwr_content_headingParent">
+                    <div class="www_contentDiv"></div>
+                    <div class="wwr_contentheading">
+                        Who We Are
+                    </div>
+
+                </div>
+                <h1>From the Blog</h1>
+
+                <!-- <div class="articleinput">
+                        <input type="email" placeholder="Enter your email" </div>
+                        <div class="articleRadio"></div>
+                    </div> -->
+
+
+            </div>
+            <div class="articleParent">
+                <div class="articleOne">
+                    <div class="cartImg">
+                        <img src="./imgs/post-5-copyright-740x580.jpg" alt="" width="100%">
+                    </div>
+                    <div class="articleContent">
+                        <div class="date">
+                            <div class="news">
+                                <p>News</p>
+                            </div>
+                            <div class="dott">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="dat">
+                                April 9,2019
+                            </div>
+                        </div>
+                        <div class="articletitle">
+                            <h2>
+
+                                World’s most famous app developers and designers</h2>
+                        </div>
+                        <div class="readMore">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <p>Read More</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="articleOne">
+                    <div class="cartImg">
+                        <img src="./imgs/post-6-copyright-740x580.jpg" alt="" width="100%">
+                    </div>
+                    <div class="articleContent">
+                        <div class="date">
+                            <div class="news">
+                                <p>News</p>
+                            </div>
+                            <div class="dott">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="dat">
+                                April 9,2019
+                            </div>
+                        </div>
+                        <div class="articletitle">
+                            <h2>
+
+                                World’s most famous app developers and designers</h2>
+                        </div>
+                        <div class="readMore">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <p>Read More</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="articleOne">
+                    <div class="cartImg">
+                        <img src="./imgs/post-13-copyright-740x580.jpg" alt="" width="100%">
+                    </div>
+                    <div class="articleContent">
+                        <div class="date">
+                            <div class="news">
+                                <p>News</p>
+                            </div>
+                            <div class="dott">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="dat">
+                                April 9,2019
+                            </div>
+                        </div>
+                        <div class="articletitle">
+                            <h2>
+
+                                World’s most famous app developers and designers</h2>
+                        </div>
+                        <div class="readMore">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <p>Read More</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form">
+            <div class="formParent">
+                <div class="wwr_content_headingParent">
+                    <div class="www_contentDiv"></div>
+                    <div class="wwr_contentheading">
+                        Newsletter Sign Up
+                    </div>
+
+                </div>
+                <div class="fom">
+                    <div class="input">
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="radio">
+                        <div class="radicontext">
+                            <div class="rado">
+                                <input type="radio">
+                            </div>
+                            <div class="radoText">
+                                i agree to the <br>
+                                privacy policy
+                            </div>
+                        </div>
+                        <div class="formarro">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="intouch">
+                <img src="./imgs/getintouch.png" alt="" width="100">
+                <p>Get in touch</p>
+                <h2>Have a Project?</h2>
+                <div class="getintouchbtn">
+                    Get In Touch
+                </div>
+            </div>
+            <div class="incontact">
+
+                <img src="./imgs/contact.png" alt="" width="60">
+                <p>Get in touch</p>
+                <h2>Have a Project?</h2>
+                <div class="getintouchbtn">
+                    Get In Touch
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
